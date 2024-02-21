@@ -6,14 +6,14 @@ import { useParams, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Heading } from "@/components/ui/heading"
 import { Separator } from "@/components/ui/separator"
-import { SizeColumn, columns } from "./columns"
+import { ColorColumn, columns } from "./columns"
 import { DataTable } from "@/components/ui/data-table"
 import { ApiList } from "@/components/ui/api-list"
 
-interface SizesClientProps {
-     data: SizeColumn[]
+interface ColorsClientProps {
+     data: ColorColumn[]
 }
-export const SizesClient: React.FC<SizesClientProps> = ({
+export const ColorsClient: React.FC<ColorsClientProps> = ({
      data
 })=> {
      const router = useRouter();
@@ -22,10 +22,10 @@ export const SizesClient: React.FC<SizesClientProps> = ({
           <>
                <div className="flex items-center justify-between">
                     <Heading
-                         title={`Sizes (${data.length})`}
-                         description="Manange Sizes for your store"
+                         title={`Colors (${data.length})`}
+                         description="Manange Colors for your store"
                     />
-                    <Button onClick={()=> router.push(`/${params.storeId}/sizes/new`)}>
+                    <Button onClick={()=> router.push(`/${params.storeId}/colors/new`)}>
                          <Plus className="mr-2 h-4 w-4"/>
                          Add New
                     </Button>
@@ -34,12 +34,12 @@ export const SizesClient: React.FC<SizesClientProps> = ({
                <DataTable columns={columns} data={data} searchKey="name"/>
                <Heading
                     title= "API"
-                    description="Api calls for Sizes"
+                    description="Api calls for Colors"
                />
                <Separator/>
                <ApiList
-                    entityName="sizes"
-                    entityIdName="sizeId"
+                    entityName="colors"
+                    entityIdName="colorId"
                />
           </>
      )
