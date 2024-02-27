@@ -335,7 +335,7 @@ export const ProductForm: React.FC<ProductFormProps> = ({
                                                        Archived
                                                   </FormLabel>
                                                   <FormDescription>
-                                                       This product wouldn't appear on store
+                                                       This product wouldnot appear on store
                                                   </FormDescription>
                                              </div>
                                         </FormItem>
