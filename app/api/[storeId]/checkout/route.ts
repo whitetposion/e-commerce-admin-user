@@ -30,20 +30,20 @@ export async function POST(
           }
      })
 
-     const line_items: Stripe.Checkout.SessionCreateParams.LineItem[]=[];
+     // const line_items: Stripe.Checkout.SessionCreateParams.LineItem[]=[];
 
-     products.forEach((product) =>{
-          line_items.push({
-               quantity:1,
-               price_data: {
-                    currency: 'INR',
-                   product_data: {
-                    name: product.name
-                   },
-                   unit_amount: product.price.toNumber()*100
-               }
-          });
-     });
+     // products.forEach((product) =>{
+     //      line_items.push({
+     //           quantity:1,
+     //           price_data: {
+     //                currency: 'INR',
+     //               product_data: {
+     //                name: product.name
+     //               },
+     //               unit_amount: product.price.toNumber()*100
+     //           }
+     //      });
+     // });
 
      const order = await prismadb.order.create({
           data: {
@@ -61,22 +61,22 @@ export async function POST(
           }
      })
 
-     const session = await stripe.checkout.sessions.create({
-          line_items,
-          mode: "payment",
-          billing_address_collection: "required",
-          phone_number_collection: {
-               enabled: true
-          },
-          success_url: `${process.env.FRONTEND_STORE_URL}/cart?success=1`,
-          cancel_url: `${process.env.FRONTEND_STORE_URL}/cart?cancel=1`,
-          metadata: {
-               orderId: order.id
-          }
-     });
-     // const finalurl  = `${process.env.FRONTEND_STORE_URL}/cart?success=1`
+     // const session = await stripe.checkout.sessions.create({
+     //      line_items,
+     //      mode: "payment",
+     //      billing_address_collection: "required",
+     //      phone_number_collection: {
+     //           enabled: true
+     //      },
+     //      success_url: `${process.env.FRONTEND_STORE_URL}/cart?success=1`,
+     //      cancel_url: `${process.env.FRONTEND_STORE_URL}/cart?cancel=1`,
+     //      metadata: {
+     //           orderId: order.id
+     //      }
+     // });
+     const finalurl  = `${process.env.FRONTEND_STORE_URL}/cart?success=1`
 
-     return NextResponse.json({url:session.url} , {
+     return NextResponse.json({url:finalurl} , {
           headers:corsHeaders
      })
 
