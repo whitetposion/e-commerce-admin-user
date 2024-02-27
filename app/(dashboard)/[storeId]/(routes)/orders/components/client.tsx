@@ -19,8 +19,8 @@ export const OrdersClient: React.FC<OrdersClientProps> = ({
      return (
           <>
                <Heading
-                    title={`Billboard (${data.length})`}
-                    description="Manange billboard for your store"
+                    title={`Orders (${data.length})`}
+                    description="View orders for your store"
                />
                <Separator/>
                <DataTable columns={columns} data={data} searchKey="products"/>
