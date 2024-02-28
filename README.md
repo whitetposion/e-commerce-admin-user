@@ -1,36 +1,8 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+This a a E-commerce admin dashboard, we can create, update , delete the content on e-commerce store data from this admin dashboard not only of one store but also multiple stores, we can check the status of orders , revenue, inventory of store
+![image](https://github.com/whitetposion/e-commerce-admin-user/assets/121298372/43eca4a3-5054-4eb7-bbe1-d2b71b59326b)
 
-## Getting Started
+we can edit product details 
+![image](https://github.com/whitetposion/e-commerce-admin-user/assets/121298372/aadffe51-32bb-4dd8-bffd-8ad66a496253)
 
-First, run the development server:
-
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+we can check order status 
+![image](https://github.com/whitetposion/e-commerce-admin-user/assets/121298372/b5a72a31-b27e-4647-8ce7-26ab9d8cb203)
