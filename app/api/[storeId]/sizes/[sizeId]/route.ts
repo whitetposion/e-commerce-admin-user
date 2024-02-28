@@ -43,7 +43,7 @@ export async function PATCH (
           if (!params.sizeId){
                return new NextResponse("Size Must have a Id", { status: 400})
           }
-          const storeByUserId = await prisma?.store.findFirst({
+          const storeByUserId = await prismadb.store.findFirst({
                where: {
                     id: params.storeId,
                     userId
@@ -81,7 +81,7 @@ export async function DELETE (
           if (!params.sizeId){
                return new NextResponse("Size Id is required", { status: 400})
           }
-          const storeByUserId = await prisma?.store.findFirst({
+          const storeByUserId = await prismadb.store.findFirst({
                where: {
                     id: params.storeId,
                     userId

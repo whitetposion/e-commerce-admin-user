@@ -46,7 +46,7 @@ export async function PATCH (
           if (!params.categoryId){
                return new NextResponse("Category Must have a Id", { status: 400})
           }
-          const storeByUserId = await prisma?.store.findFirst({
+          const storeByUserId = await prismadb.store.findFirst({
                where: {
                     id: params.storeId,
                     userId
@@ -84,7 +84,7 @@ export async function DELETE (
           if (!params.categoryId){
                return new NextResponse("Category Id is required", { status: 400})
           }
-          const storeByUserId = await prisma?.store.findFirst({
+          const storeByUserId = await prismadb.store.findFirst({
                where: {
                     id: params.storeId,
                     userId
